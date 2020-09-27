@@ -89,7 +89,7 @@ void number_comparison(Rational a, Rational b) // Функция сравнен�
     }  
 }
 
-void PrintResult(Rational a, Rational b, Rational res, char c)
+void PrintResult(Rational a, Rational b, Rational res, char c) // Функция вывода результата после выполнения операции
 {
     a.print_rational();
     cout <<" " << c << " ";
@@ -161,6 +161,7 @@ int menu() // Меню действий
         }
         else if(variant == 2)
         {
+            cout << "Program completed!\n";
             return 0;
         }
         else
@@ -169,80 +170,3 @@ int menu() // Меню действий
         } 
     }
 }
-
-
-/*
-int menu()
-{
-    while(true)
-    {
-        int c;
-        while(true)
-        {
-            cout << "Work menu with rational numbers:\n"; // Меню работы с рациональными числами
-            cout << "1 - Add two numbers\n"; // Сложить два числа 
-            cout << "2 - Subtract another from one number\n"; // Вычесть из одного числа другое
-            cout << "3 - Multiply two numbers\n"; // Умножить два числа
-            cout << "4 - Divide one number by another\n"; // Разделить одно число на другое
-            cout << "5 - Compare two numbers\n"; // Сравнить два числа
-            cout << "6 - Exit";
-            cin >> c;
-            Rational a, b, result;
-            cout << "Enter the value of the first number: "; // Введите значение первого числа
-            a.get_rational();
-            cout << "Enter the value of the second number: "; // Введите значение второго числа
-            b.get_rational();
-            if(c == 1)
-            {
-                result.add(a,b);
-                a.print_rational();
-                cout << " + ";
-                b.print_rational();
-                cout << " = ";
-                result.print_rational();    
-            }
-            else if(c == 2)
-            {
-                result.sub(a,b);
-                a.print_rational();
-                cout << " - ";
-                b.print_rational();
-                cout << " = ";
-                result.print_rational();  
-            }
-            else if(c == 3)
-            {
-                result.mul(a,b);
-                a.print_rational();
-                cout << " * ";
-                b.print_rational();
-                cout << " = ";
-                result.print_rational();  
-            }
-            else if(c == 4)
-            {
-                result.div(a,b);
-                a.print_rational();
-                cout << " / ";
-                b.print_rational();
-                cout << " = ";
-                result.print_rational();  
-            }
-            else if(c == 5)
-            {
-                number_comparison(a, b);
-            }
-            else if(c == 6)
-            {
-                break;
-            }
-            else
-            {
-                cout << "The entered action does not exist! Please re-enter the action\n"; // Введённого действия не существует! Пожалуйста, введите действие повторно
-            }
-            cout << "\n";
-        }
-    }
-    return 0;
-}
-*/
